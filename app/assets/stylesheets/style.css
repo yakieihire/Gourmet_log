@@ -134,7 +134,7 @@ a {
   height: 35vh;
 }
 .block {
-  background-color: #fff;
+  background-color: #ead7b4;
   position: relative;
   width: 550px;
   height: 200px;
@@ -219,4 +219,50 @@ a {
   width: 200px;
   position: relative;
   bottom: 45vh;
+}
+
+.more {
+  position: absolute;
+  cursor: pointer;
+  top: 70px;
+  right: 1px;
+  z-index: 2;
+  height: 100px;
+  width: 80px;
+  text-align: right;
+}
+
+.more:hover ul.more_list {
+  display: block;
+}
+
+.more ul.more_list {
+  position: absolute;
+  text-align: left;
+  width: 80px;
+  right: 0;
+  font-size: 12px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  display: none;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.more ul.more_list li {
+  border-bottom: 1px solid #ddd;
+}
+
+.more ul.more_list li:last-child {
+  border-bottom: 0;
+}
+
+.more ul.more_list li a {
+  display: block;
+  padding: 5px;
+}
+
+.more ul.more_list li a:hover {
+  background-color: #e5b761;
+  color: #fff;
 }
