@@ -1,0 +1,49 @@
+<div class="shop-show">
+  <div class= "image_g">
+    <%= image_tag "restaurant.jpg", class: :image_restaurant_g %>
+  </div>
+  <div class="shop-box">
+    <div class="shop-img-content">
+      <%= image_tag @shop.image ,class:"shop-box-img" if @shop.image.attached? %>
+    </div>
+
+    <% if user_signed_in? %>
+        <%# link_to "お店の編集", edit_shop_path(shops.id), method: :get, class: "item-red-btn" %>
+        <%# link_to "削除", shop_path(@shop.id), method: :delete, class:"item-destroy" %>
+    <% end %>
+
+    <div class="item-explain-box">
+
+    </div>
+    <table class="detail-table">
+      <div class="logo_t">
+        <%= link_to image_tag("logo_transparent.png", class: :logo_a), root_path %>
+      </div>
+      <tbody>
+        <tr>
+          <th class="detail-item">店名</th>
+          <td class="detail-value"><%= @shop.store_name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">ジャンル</th>
+          <td class="detail-value"><%= @shop.category.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">メニュー</th>
+          <td class="detail-value"><%= @shop.menu %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">場所</th>
+          <td class="detail-value"><%= @shop.place %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">URL</th>
+          <td class="detail-value"><%=link_to @shop.store_url %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">メモ</th>
+          <td class="detail-value"><%= @shop.memo %></td>
+        </tr>
+      </tbody>
+    </table>
+</div>
