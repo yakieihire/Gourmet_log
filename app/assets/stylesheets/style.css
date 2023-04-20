@@ -1,0 +1,222 @@
+/* リセットCSS */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+ul,
+li,
+h1,
+h2,
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
+  color: #3b4043;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  color: #3b4043;
+}
+
+/* ヘッダー */
+
+.header {
+  background-color: #f4cfa7;
+  height: 90px;
+}
+.image_restaurant {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 30%;
+  padding: 90px 0;
+}
+.inner {
+  width: 1024px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  bottom: 138vh;
+}
+.logo {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  bottom: 8vh;
+  right: 6vw;
+}
+.nav__btn{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: rgb(131, 55, 11);
+  text-decoration: none;
+  user-select: none;
+  border: 1px #8e651d solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+}
+.nav__btn:hover{
+  color: #fff;
+  background: rgb(208, 187, 165);
+}
+
+.nav__logout{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #ab5a09;
+  text-decoration: none;
+  user-select: none;
+}
+.nav__logout:hover{
+  opacity: 0.5;
+}
+
+
+/* メイン */
+
+.greeting{
+  margin-bottom: 20px;
+}
+.greeting__link{
+  text-decoration: underline;
+}
+.page-heading {
+  font-size: 30px;
+  margin-bottom: 28px;
+}
+.card__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: left;
+  min-height: calc(100vh - 161px);
+}
+.card {
+  position: absolute;
+  color: black;
+  top: 90px;
+  left: 30px;
+  font-weight: 600;
+  font-size: 2em;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.shop_list {
+  position: relative;
+  height: 35vh;
+}
+.block {
+  background-color: #fff;
+  position: relative;
+  width: 550px;
+  height: 200px;
+  top: 70px;
+  left: 20px;
+  border-radius: 10px 10px;
+}
+.shop_imege {
+  object-fit: cover;
+  position: absolute;
+  left: 22vw;
+  top: 4vh;
+}
+
+.card__img {
+  margin-bottom: 16px;
+}
+.card__title {
+  display: block;
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  padding: 30px 20px;
+}
+.card__summary {
+  font-size: 20px;
+  padding: 0 20px;
+}
+
+.contents_row {
+  background-color: bisque;
+  height: 100vh;
+  display: flex;
+}
+.logo_t {
+  position: absolute;
+  left: 550px;
+}
+
+.logo_y{
+  height: 250px;
+  width: 250px;
+  position: relative;
+  bottom: 50px;
+  left: 30px;
+}
+.shop-show {
+  display: flex;
+}
+.image_restaurant_g {
+  width: 1024vw;
+  opacity: 30%;
+}
+.shop-box {
+  background-color: white;
+  width: 90vw;
+  height: 90vh;
+  position: absolute;
+  top: 100px;
+  left: 70px;
+}
+.shop-box-img {
+  width: 30vw;
+  height: 40vh;
+  position: relative;
+  left: 55vw;
+  top: 15vh;
+}
+.detail-table {
+  position: relative;
+  bottom: 200px;
+  left: 60px;
+  font-weight: 800;
+  font-size: 1.3em;
+  padding: 50px 0;
+}
+.detail-item {
+  padding: 15px;
+}
+.logo_a {
+  height: 200px;
+  width: 200px;
+  position: relative;
+  bottom: 45vh;
+}
