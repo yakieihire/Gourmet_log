@@ -28,20 +28,20 @@
 <main class="main">
   <div class="card">登録店一覧</div>
 
-    <%# @shops.each do |shop| %>
+    <% @shops.each do |shop| %>
       <div class= "shop_list">
         <div class= "block">
           <div class= "shop_imege">
-            <%# image_tag shop.image.variant(resize: '200x250'), class: "shop-img" if shop.image.attached?  %>
+            <%= image_tag shop.image.variant(resize: '200x250'), class: "shop-img" if shop.image.attached?  %>
           </div>
             <div class="card__body">
-              <%# link_to shop.store_name, shop_path(shop.id), class: :card__title%>
+              <%= link_to shop.store_name, shop_path(shop.id), class: :card__title%>
               <p class="card__summary">
-                <%# shop.category.name %>
+                <%= shop.category.name %>
               </p>
             </div>
           </div>
         </div>
       </div>
-    <%# end %>
+    <% end %>
 </main>
