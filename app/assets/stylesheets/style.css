@@ -266,3 +266,8 @@ a {
   background-color: #e5b761;
   color: #fff;
 }
+.preview-image {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+}
