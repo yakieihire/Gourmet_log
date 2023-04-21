@@ -21,16 +21,15 @@
 </header>
 
 <main class="main">
-  <div class="image_r">
     <%= image_tag "restaurant.jpg", class: "image_restaurant" %>
-  </div>
+    <%= image_tag "ogasuta458A7755.jpg", class: "image_restaurant_a" %>
   <div class="card">登録店一覧</div>
 
   <% @shops.each do |shop| %>
     <div class="shop_list">
       <div class="block">
         <div class="shop_imege">
-          <%= image_tag shop.images[0].variant(resize: "200x250"), class: "shop-img" if shop.images.attached? %><br>
+          <%= image_tag shop.images[0].variant(resize: "210x250"), class: "shop-img" if shop.images.attached? %><br>
         </div>
         <div class="card__body">
           <%= link_to shop.store_name, shop_path(shop.id), class: "card__title" %>

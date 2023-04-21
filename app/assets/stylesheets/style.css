@@ -52,6 +52,15 @@ a {
   opacity: 30%;
   right: 0vw;
 }
+.image_restaurant_a {
+  position: absolute;
+  top: 112.8vh;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 30%;
+  right: 0vw;
+}
 .inner {
   width: 1024px;
   height: 100%;
@@ -94,23 +103,10 @@ a {
   text-decoration: none;
   user-select: none;
 }
-.nav__logout:hover{
-  opacity: 0.5;
-}
 
 
 /* メイン */
 
-.greeting{
-  margin-bottom: 20px;
-}
-.greeting__link{
-  text-decoration: underline;
-}
-.page-heading {
-  font-size: 30px;
-  margin-bottom: 28px;
-}
 .card__wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -121,7 +117,7 @@ a {
 .card {
   position: absolute;
   color: black;
-  top: 90px;
+  top: 100px;
   left: 30px;
   font-weight: 600;
   font-size: 2em;
@@ -132,6 +128,7 @@ a {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
 .shop_list {
   position: relative;
   height: 35vh;
@@ -148,12 +145,9 @@ a {
   object-fit: cover;
   position: absolute;
   left: 22vw;
-  top: 4vh;
+  top: 5vh;
 }
 
-.card__img {
-  margin-bottom: 16px;
-}
 .card__title {
   display: block;
   font-size: 30px;
@@ -164,12 +158,6 @@ a {
 .card__summary {
   font-size: 20px;
   padding: 0 20px;
-}
-
-.contents_row {
-  background-color: bisque;
-  height: 100vh;
-  display: flex;
 }
 .logo_t {
   position: absolute;
@@ -204,7 +192,9 @@ a {
   position: relative;
   left: 55vw;
   top: 15vh;
+  object-fit: cover;
 }
+
 .detail-table {
   position: relative;
   bottom: 200px;
