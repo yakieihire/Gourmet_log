@@ -169,7 +169,7 @@ a {
   height: 250px;
   width: 250px;
   position: relative;
-  bottom: 50px;
+  top: 80px;
   left: 30px;
 }
 .shop-show {
@@ -277,6 +277,7 @@ a {
   text-align: center;
   border: solid 1px;
   cursor: pointer;
+  width: 50px;
 }
 
 .main-image {
