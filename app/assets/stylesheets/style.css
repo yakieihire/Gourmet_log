@@ -162,6 +162,7 @@ a {
 .logo_t {
   position: absolute;
   left: 550px;
+  bottom: 83vh;
 }
 
 .logo_y{
@@ -187,17 +188,17 @@ a {
   left: 70px;
 }
 .shop-box-img {
-  width: 30vw;
-  height: 40vh;
+  width: 26vw;
+  height: 30vh;
   position: relative;
-  left: 55vw;
-  top: 15vh;
+  left: 63vw;
+  top: 5vh;
   object-fit: cover;
 }
 
 .detail-table {
-  position: relative;
-  bottom: 200px;
+  position: absolute;
+  bottom: 20vh;
   left: 60px;
   font-weight: 800;
   font-size: 1.3em;
@@ -207,10 +208,8 @@ a {
   padding: 15px;
 }
 .logo_a {
-  height: 200px;
-  width: 200px;
-  position: relative;
-  bottom: 45vh;
+  height: 190px;
+  width: 190px;
 }
 
 .more {
@@ -265,12 +264,14 @@ a {
 }
 
 .other-images {
-  display: flex;
+  position: relative;
+  height: 250px;
+  width: 250px;
+  left: 45vw;
+  bottom: 25vh;
+  object-fit: contain;
 }
 
-.other-image {
-  margin-right: 10px;
-}
 
 .image-delete-button {
   text-align: center;
@@ -281,11 +282,4 @@ a {
 .main-image {
   height: 200px;
   width: 200px;
-}
-
-.image-delete-button {
-  width: 50px;
-  border: solid 1px;
-  cursor: pointer;
-  margin-bottom: 5px;
 }
