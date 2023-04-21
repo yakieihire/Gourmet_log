@@ -8,7 +8,7 @@
       <div class="field">
         <div id="previews"></div>
         <%= f.label :image, "お店の画像" %><br />
-        <%= f.file_field :image, id:"shop_image" %>
+        <%= f.file_field :image, id:"shop_image" name: 'shop[images][]', data: {index: 0}%>
       </div>
 
       <div class="field">
