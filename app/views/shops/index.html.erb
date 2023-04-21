@@ -1,60 +1,57 @@
 <header class="header">
-    <div class= "image_r">
-        <%= image_tag "restaurant.jpg", class: :image_restaurant %>
-    </div>
-      <div class="inner">
-        <div class="nav">
-          <div class="nav__left">
-            <%= link_to image_tag("logo_transparent.png", class: :logo), root_path %>
-          </div>
-          <% if user_signed_in? %>
-            <div class="nav__right">
-              <%= link_to current_user.nickname, "#", class: "user-nickname" %>
-              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout%>
-              <%= link_to "お店を登録", new_shop_path, class: :nav__btn %>
-            </div>
-          <% else %>
-            <div class="nav__right">
-              <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
-              <%= link_to "新規登録", cancel_user_registration_path, class: :nav__btn %>
-            </div>
-          <% end %>
-        </div>
+  <div class="inner">
+    <div class="nav">
+      <div class="nav__left">
+        <%= link_to image_tag("logo_transparent.png", class: "logo"), root_path %>
       </div>
-    </header>
-
-
+      <% if user_signed_in? %>
+        <div class="nav__right">
+          <%= link_to current_user.nickname, "#", class: "user-nickname" %>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav__logout" %>
+          <%= link_to "お店を登録", new_shop_path, class: "nav__btn" %>
+        </div>
+      <% else %>
+        <div class="nav__right">
+          <%= link_to "ログイン", new_user_session_path, class: "nav__btn" %>
+          <%= link_to "新規登録", cancel_user_registration_path, class: "nav__btn" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</header>
 
 <main class="main">
+  <div class="image_r">
+    <%= image_tag "restaurant.jpg", class: "image_restaurant" %>
+  </div>
   <div class="card">登録店一覧</div>
 
-    <% @shops.each do |shop| %>
-      <div class= "shop_list">
-        <div class= "block">
-          <div class= "shop_imege">
-            <%= image_tag shop.image.variant(resize: '200x250'), class: "shop-img" if shop.image.attached?  %>
-          </div>
-            <div class="card__body">
-              <%= link_to shop.store_name, shop_path(shop.id), class: :card__title%>
-              <p class="card__summary">
-                <%= shop.category.name %>
-              </p>
-            </div>
-          </div>
-          <div class="more">
-              <span><%= image_tag 'arrow_top.png' %></span>
-            <ul class="more_list">
-              <% if user_signed_in? %>
-              <li>
-                <%= link_to '編集', edit_shop_path(shop.id), method: :get %>
-              </li>
-              <li>
-                <%= link_to '削除', shop_path(shop.id) ,method: :delete, method: :delete %>
-              </li>
-              <% end %>
-            </ul>
-          </div>
+  <% @shops.each do |shop| %>
+    <div class="shop_list">
+      <div class="block">
+        <div class="shop_imege">
+          <%= image_tag shop.image.variant(resize: "200x250"), class: "shop-img" if shop.image.attached? %>
+        </div>
+        <div class="card__body">
+          <%= link_to shop.store_name, shop_path(shop.id), class: "card__title" %>
+          <p class="card__summary">
+            <%= shop.category.name %>
+          </p>
         </div>
       </div>
-    <% end %>
+      <div class="more">
+        <span><%= image_tag "arrow_top.png" %></span>
+        <ul class="more_list">
+          <% if user_signed_in? %>
+            <li>
+              <%= link_to "編集", edit_shop_path(shop.id), method: :get %>
+            </li>
+            <li>
+              <%= link_to "削除", shop_path(shop.id), method: :delete, data: { confirm: "Are you sure?" }, class: "delete-btn" %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
 </main>
