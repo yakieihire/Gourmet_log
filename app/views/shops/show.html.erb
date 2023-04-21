@@ -4,7 +4,14 @@
   </div>
   <div class="shop-box">
     <div class="shop-img-content">
-      <%= image_tag @shop.image ,class:"shop-box-img" if @shop.image.attached? %>
+      <%= image_tag @shop.images[0], class:"shop-box-img" if @shop.images.attached? %><br>
+      <div class="other-images">
+        <% @shop.images[1..-1].each do |image| %>
+          <div class="other-image_a">
+            <%= image_tag image %>
+          </div>
+        <% end %>
+      </div>
     </div>
 
     <% if user_signed_in? %>
@@ -13,12 +20,11 @@
     <% end %>
 
     <div class="item-explain-box">
-
-    </div>
-    <table class="detail-table">
     <div class="logo_t">
       <%= link_to image_tag("logo_transparent.png", class: :logo_a), root_path %>
     </div>
+    </div>
+    <table class="detail-table">
       <tbody>
         <tr>
           <th class="detail-item">店名</th>
@@ -46,4 +52,5 @@
         </tr>
       </tbody>
     </table>
+  </div>
 </div>

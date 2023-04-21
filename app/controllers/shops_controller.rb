@@ -42,7 +42,7 @@ class ShopsController < ApplicationController
 
   private
   def shop_params
-    params.require(:shop).permit(:image, :store_name, :category_id, :menu, :place, :store_url, :memo, :interesting_store_id).merge(user_id: current_user.id)
+    params.require(:shop).permit( {images: []}, :store_name, :category_id, :menu, :place, :store_url, :memo, :interesting_store_id).merge(user_id: current_user.id)
   end
 
   def set_item
