@@ -14,10 +14,16 @@
       </div>
     </div>
 
-    <% if user_signed_in? %>
-        <%# link_to "お店の編集", edit_shop_path(shops.id), method: :get, class: "item-red-btn" %>
-        <%# link_to "削除", shop_path(@shop.id), method: :delete, class:"item-destroy" %>
-    <% end %>
+        <ul class="more_list_a">
+          <% if user_signed_in? %>
+            <li class="more_list_w">
+              <%= link_to "編集", edit_shop_path(@shop.id), method: :get %>
+            </li>
+            <li>
+              <%= link_to "削除", shop_path(@shop.id), method: :delete, class: "delete-btn" %>
+            </li>
+          <% end %>
+        </ul>
 
     <div class="item-explain-box">
     <div class="logo_t">

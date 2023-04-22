@@ -284,3 +284,12 @@ a {
   height: 200px;
   width: 200px;
 }
+.more_list_a {
+  position: relative;
+  bottom: 430px;
+  left: 20px;
+  font-weight: 600;
+}
+.more_list_w {
+  padding: 10px 0;
+}
