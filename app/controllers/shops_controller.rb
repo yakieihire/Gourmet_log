@@ -39,6 +39,10 @@ class ShopsController < ApplicationController
     end
   end
 
+  def search
+    @shops = Shop.search(params[:keyword])
+  end
+
 
   private
   def shop_params
