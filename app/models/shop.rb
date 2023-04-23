@@ -8,4 +8,12 @@ class Shop < ApplicationRecord
   validates :images, length: { minimum: 1, maximum: 4, message: "は1枚以上5枚以下にしてください" }
   validates :store_name, presence: true
   validates :category_id, presence: true
+
+  def self.search(search)
+    if search.present?
+      Shop.where('store_name LIKE ? OR menu LIKE ? OR place LIKE ?', "%#{search}%", "%#{search}%", "%#{search}%").where(interesting_store_id: 1)
+    else
+      Shop.where(interesting_store_id: 1)
+    end
+  end
 end
