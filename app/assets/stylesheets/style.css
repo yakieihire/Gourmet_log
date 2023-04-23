@@ -356,7 +356,7 @@ a:hover {
 
 form input,
 form textarea {
-  width: 100%;
+  width: 80%;
   margin: 5px 0 15px;
   padding: 10px;
   border: 1px solid #D8D8D8;
@@ -370,4 +370,15 @@ form input[type="submit"] {
   color: #fff;
   border: 0;
   font-size: 16px;
+}
+
+.container {
+  position: relative;
+  top: 15vh;
+  left: 10vw;
+}
+
+.contents_row {
+  background-color: #ead7b4;
+  height: 100vh;
 }
