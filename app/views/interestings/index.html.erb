@@ -1,22 +1,10 @@
-<header class="header">
+<header class="header_a">
   <div class="inner">
     <div class="nav">
       <div class="nav__left">
         <%= link_to image_tag("logo_transparent.png", class: "logo"), root_path %>
       </div>
-      <% if user_signed_in? %>
-        <div class="nav__right">
-          <%= link_to current_user.nickname, "#", class: "user-nickname" %>
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav__logout" %>
-          <%= link_to "お店を登録", new_shop_path, class: "nav__btn" %>
-          <%= link_to "気になるお店", shop_interestings_path(@shops), class: :nav__btn %>
-        </div>
-      <% else %>
-        <div class="nav__right">
-          <%= link_to "ログイン", new_user_session_path, class: "nav__btn" %>
-          <%= link_to "新規登録", cancel_user_registration_path, class: "nav__btn" %>
-        </div>
-      <% end %>
+      <div class="card_a">気になるお店</div>
     </div>
   </div>
 </header>
@@ -25,8 +13,8 @@
     <%= image_tag "restaurant.jpg", class: "image_restaurant" %>
     <%= image_tag "ogasuta458A7755.jpg", class: "image_restaurant_a" %>
   <div class="card">登録店一覧</div>
-  <% if user_signed_in? && @shops.where(interesting_store_id: 1).exists? %>
-  <% @shops.where(interesting_store_id: 1).each do |shop| %>
+  <% if user_signed_in? && @shops.where(interesting_store_id: 2).exists? %>
+  <% @shops.where(interesting_store_id: 2).each do |shop| %>
     <div class="shop_list">
       <div class="block">
         <div class="shop_imege">
