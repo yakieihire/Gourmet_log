@@ -138,15 +138,17 @@ a {
   position: relative;
   width: 550px;
   height: 200px;
-  top: 70px;
+  top: 100px;
   border-radius: 10px 10px;
 }
 .shop_imege {
   object-fit: cover;
   position: absolute;
-  left: 22vw;
+  left: 24vw;
   top: 5vh;
+  width: 36%;
 }
+
 
 .card__title {
   display: block;
@@ -171,6 +173,11 @@ a {
   position: relative;
   top: 80px;
   left: 30px;
+}
+.logo_g {
+  position: relative;
+  bottom: 8vh;
+  left: 18vw;
 }
 .shop-show {
   display: flex;
@@ -215,7 +222,7 @@ a {
 .more {
   position: absolute;
   cursor: pointer;
-  top: 70px;
+  top: 100px;
   right: 8px;
   z-index: 2;
   height: 100px;
@@ -306,4 +313,61 @@ a {
   left: 40vw;
   font-weight: 600;
   font-size: 2em;
+}
+
+.search-form {
+  display: flex;
+  position: absolute;
+  left: 26vw;
+  top: 3vh;
+}
+
+.search-form .search-input {
+  padding: 10px 80px 10px 5px ;
+}
+
+.search-form .search-btn {
+  width: 10vw;
+}
+
+body {
+  line-height: 1.57;
+  letter-spacing: 0.15em;
+  font-size: 16px;
+  color: #000000;
+  font-family: 'Unica One', "Avenir", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+a:hover {
+  color: #9f6309;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+
+
+form input,
+form textarea {
+  width: 100%;
+  margin: 5px 0 15px;
+  padding: 10px;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  font-family: "游ゴシック", "YuGothic";
+}
+
+form input[type="submit"] {
+  background-color: #15cb34;
+  border-radius: 10px;
+  color: #fff;
+  border: 0;
+  font-size: 16px;
 }
