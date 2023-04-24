@@ -272,10 +272,10 @@ a {
 
 .other-images {
   position: relative;
-  height: 250px;
-  width: 250px;
-  left: 45vw;
-  bottom: 25vh;
+  height: 200px;
+  width: 200px;
+  left: 73vw;
+  top: 5vh;
   object-fit: contain;
 }
 
@@ -293,7 +293,7 @@ a {
 }
 .more_list_a {
   position: relative;
-  bottom: 430px;
+  bottom: 400px;
   left: 20px;
   font-weight: 600;
 }
