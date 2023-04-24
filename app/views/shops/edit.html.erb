@@ -5,6 +5,7 @@
         <%= link_to image_tag("logo_transparent.png", class: :logo_y), root_path %>
       </div>
     <%= form_with model: @shop,id: 'new_post',id: 'new_post', local: true do |f|%>
+    <%= render 'layouts/error_messages', model: f.object %>
       <div class="field">
         <div id="previews"></div>
 
