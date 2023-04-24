@@ -1,0 +1,10 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+        email: メールアドレス
+      shop:
+        images: 画像
+        store_name: お店の名前
+        category_id: ジャンル
