@@ -112,8 +112,6 @@ https://docs.google.com/spreadsheets/d/1y2eRAgRQGRO4LaeHNKfe_y2sI1zdAQMjMLIq6XZJ
 % git clone https://github.com/yakieihire/gourmet_log.git
 % cd gourmet_log
 % bundle install
-% rails db:create
-% rails db:migrate
 % yarn install
 
 # 工夫したポイント
