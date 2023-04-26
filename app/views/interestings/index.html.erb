@@ -15,6 +15,7 @@
   <div class="card">登録店一覧</div>
   <% if user_signed_in? && @shops.where(interesting_store_id: 2).exists? %>
   <% @shops.where(interesting_store_id: 2).each do |shop| %>
+  <% if current_user.id == shop.user_id %>
     <div class="shop_list">
       <div class="block">
         <div class="shop_imege">
@@ -41,6 +42,7 @@
         </ul>
       </div>
     </div>
+  <% end %>
   <% end %>
   <% end %>
 </main>
